@@ -1,0 +1,184 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #32459a, #764ba2, #e879f9);
+        background-size: 200% 200%;
+        animation: gradientMove 8s ease infinite;
+    }
+
+    form {
+        width: 100%;
+        max-width: 460px;
+        padding: 40px 35px;
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(30, 20, 80, 0.25);
+        animation: fadeUp 0.8s ease;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 30px;
+        letter-spacing: -0.8px;
+    }
+
+    h1::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        margin: 10px auto 0;
+        border-radius: 10px;
+        background: #fef08a;
+    }
+
+    form > div:first-of-type {
+        display: flex;
+        gap: 12px;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 12px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.92);
+        color: #292344;
+        font-family: inherit;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+
+    input[type="text"]::placeholder {
+        color: #88839c;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+        border-color: #fef08a;
+        box-shadow: 0 0 0 4px rgba(254, 240, 138, 0.22);
+        transform: translateY(-2px);
+    }
+
+    form > div:nth-of-type(2) {
+        color: white;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    label[for="gender"] {
+        display: block;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    form > div:nth-of-type(3) {
+        color: white;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    input[type="checkbox"] {
+        width: 17px;
+        height: 17px;
+        accent-color: #fef08a;
+        vertical-align: middle;
+        cursor: pointer;
+        margin: 8px 5px 0 0;
+    }
+
+    label[for="ab"] {
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 24px;
+        padding: 15px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #fef08a, #fbbf24);
+        color: #30254c;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        box-shadow: 0 8px 20px rgba(30, 20, 80, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(30, 20, 80, 0.3);
+        background: linear-gradient(135deg, #fff7b0, #facc15);
+    }
+
+    button:active {
+        transform: scale(0.98);
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes gradientMove {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        form {
+            padding: 30px 22px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        form > div:first-of-type {
+            flex-direction: column;
+        }
+    }
+</style>
